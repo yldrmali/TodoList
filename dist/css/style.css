@@ -1,0 +1,223 @@
+    body{
+        padding: 0;
+        margin: 0;
+        background-color: rgba(0,0,0,0.1);
+        font-family: 'Titillium Web', sans-serif;
+    }
+
+    .mainContainer{
+        margin: 0 auto;
+        width: 90%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'projectContainer todoContainer';
+    }
+
+
+    .projectContainer{
+        grid-area: projectContainer;
+        margin:1vh 0 0 0;
+        width: 95%;
+        min-width: 200px;
+    }
+
+    .todoContainer{
+        grid-area: todoContainer;
+        margin:1vh 0 0 0;
+        width:100%;
+        
+    }
+
+    .projectHeader{
+        width: 100%;
+        height: 20vh ;
+        background-color: rgb(3, 3, 32);
+        background-repeat: no-repeat;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+    }
+
+    .todoHeader{
+        width: 100%;
+        min-width: 350px;
+        height: 20vh ;
+        background-color: #af0000;
+        border-radius: 15px 15px 0 0;
+        position: relative;
+    }
+
+    .todoClearAll{
+        width : 30px;
+        height: 30px;
+        position: absolute;
+        right:20px;
+        top: 20px;
+    }
+
+    .todoClearAll i{
+        font-size: 30px;
+        color: #FFF;
+    }
+
+    li.active{
+        border-left:5px solid chartreuse;
+    }
+
+    .todoClearAll i:hover{
+        cursor: pointer;
+        text-shadow: 1px 3px 5px #000;
+        transform: scale(1.5);
+    }
+
+    /* ------------ content ------------ */
+    .todoContent, .projectContent{
+        width: 100%;
+        height: 70vh; 
+        background-color: #FFF;
+        overflow: auto;
+    }
+
+
+    .todoContent::-webkit-scrollbar { 
+        display: none; 
+    }
+
+    .todoContent ul, .projectContent ul{
+        padding:0;
+        margin:0;
+    }
+
+    .itemTodo, .itemProject{
+        width:100%;
+        height: 45px;
+        min-height: 45px;
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .itemTodo i.co{
+        position: absolute;
+        font-size: 25px;
+        padding-left:5px;
+        left:15px;
+        top:10px;
+    }
+    .itemTodo i.co:hover{
+        cursor: pointer;
+    }
+    .fa-check-circle{
+        color:#6eb200;
+    }
+    .fa-plus-circle{
+        padding-left:15px;
+    }
+    .itemTodo p.text, .itemProject p.text{
+        position: absolute;
+        padding:0;
+        margin:0;
+        font-size: 20px;
+        left:50px;
+        top:5px;
+        background-color: #FFF;
+        max-width:285px;
+    }
+
+    .itemProject p.text{
+        left:10px;
+    }
+
+    .lineThrough{
+        text-decoration: line-through;
+        color : #ccc;
+    }
+    .itemTodo i.de, .itemProject i.de{
+        position: absolute;
+        font-size: 25px;
+        right:15px;
+        top:10px;
+    }
+    .itemTodo i.de:hover, .itemProject i.de:hover{
+        color:#af0000;
+        cursor: pointer;
+    }
+
+    .todoAdd, .projectAdd{
+        position: relative;
+        width: 100%;
+        height:40px;
+        background-color: #FFF;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+
+    .todoAdd i , .projectAdd i{
+        position: absolute;
+        width: 100%;
+        font-size: 40px;
+        color: #4162f6;
+    }
+
+    .todoAdd input, .projectAdd input{
+        position: absolute;
+        left: 60px;
+        height: 35px;
+        width: 70%;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        padding-left:10px;
+    }
+
+    .todoAdd input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #4162f6;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 20px;
+    }
+    .todoAdd input::-moz-placeholder { /* Firefox 19+ */
+        color: #4162f6;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 20px;
+    }
+    .todoAdd input:-ms-input-placeholder { /* IE 10+ */
+        color: #4162f6;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 20px;
+    }
+    .todoAdd input:-moz-placeholder { /* Firefox 18- */
+        color: #4162f6;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
